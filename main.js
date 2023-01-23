@@ -2,6 +2,7 @@
 
 //Selectors
 const canvas = document.querySelector('#draw');
+const title = document.querySelector('.title');
 //We don't draw directly on the canvas in HTML5, but in the context
 const ctx = canvas.getContext('2d');
 //By default, the size of the canvas will be 800x800px
@@ -57,6 +58,7 @@ function draw(e){
 
 canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
+    title.classList.add('js-hidden');
     //To avoid lines always starting from the last position, each time we draw we reset them
     [lastX, lastY] = [e.offsetX, e.offsetY];
 });
