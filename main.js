@@ -66,4 +66,7 @@ canvas.addEventListener('mousedown', (e) => {
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
-
+//Mobile
+canvas.addEventListener('touchmove', draw);
+canvas.addEventListener('touchstart', () => isDrawing = false);
+canvas.addEventListener('touchend', () => isDrawing = false);
